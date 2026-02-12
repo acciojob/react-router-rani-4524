@@ -4,12 +4,12 @@ import { StrictMode } from 'react'
 
 import ReactDOM from "react-dom";
 import App from "./components/App";
-import { BrowserRouter } from 'react-router-dom'
 
 
 
-ReactDOM.render( <BrowserRouter>
+
+ReactDOM.render(
       <StrictMode>
         <App/>
       </StrictMode>
-    </BrowserRouter>, document.getElementById("root"));
+    , document.getElementById("root"));
