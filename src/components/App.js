@@ -3,7 +3,7 @@ import React from "react";
 import './../styles/App.css';
 import Home from './Home'
 import About from './About'
-import { Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
@@ -13,10 +13,13 @@ const App = () => {
               <li><Link to ={'/about'}>About</Link></li>
       </ul>
 
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/about' element={<About/>} />
-      </Routes>
+     <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+    <Route path='/about' element={<About/>} />
+        </Switch>
+      </BrowserRouter>
+  
     </div>
   )
 }
